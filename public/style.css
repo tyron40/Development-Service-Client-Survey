@@ -1,0 +1,83 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    background-color: rgb(67, 113, 212); /* Set the background color to blue */
+    color: white; /* Set text color to white */
+    font-weight: bold; /* Make text bold */
+    font-size:xx-large;
+}
+
+header {
+    background-color: rgb(67, 113, 212);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Style labels for radio buttons and checkboxes */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Style submit button */
+input[type="submit"] {
+    background-color: #3399FF;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #007BFF;
+}
+
+/* Style progress bar container */
+.progress-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Style progress bar */
+.progress {
+    width: 100%;
+    height: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 10px;
+    background-color: #3399FF;
+    position: absolute;
+    width: 0;
+    transition: width 0.5s ease;
+}

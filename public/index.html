@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Website and App Development Survey</title>
+    <script src="JS/firebase-config.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Website and App Development Survey</h1>
+    </header>
+    <form id="surveyForm" method="POST" action="process_form.php">
+        <div class="question">
+            <p style="color: white; font-weight: bold;">1. What is the purpose of your website or app?</p>
+            <label>
+                <input type="radio" name="purpose" value="personal"> Personal
+            </label>
+            <label>
+                <input type="radio" name="purpose" value="business"> Business
+            </label>
+            <label>
+                <input type="radio" name="purpose" value="ecommerce"> E-commerce
+            </label>
+            <label>
+                <input type="radio" name="purpose" value="portfolio"> Portfolio
+            </label>
+            <label>
+                <input type="radio" name="purpose" value="other"> Other
+            </label>
+        </div>
+        <div class="question">
+            <p style="color: white; font-weight: bold;">2. What is the target audience of your website or app?</p>
+            <label>
+                <input type="radio" name="audience" value="public"> General public
+            </label>
+            <label>
+                <input type="radio" name="audience" value="students"> Students
+            </label>
+            <label>
+                <input type="radio" name="audience" value="professionals"> Professionals
+            </label>
+            <label>
+                <input type="radio" name="audience" value="agegroup"> Specific age group
+            </label>
+            <label>
+                <input type="radio" name="audience" value="other"> Other
+            </label>
+        </div>
+        <div class="question">
+            <p style="color: white; font-weight: bold;">3. What is the desired color scheme for your website or app?</p>
+            <label>
+                <input type="checkbox" name="colorscheme" value="red"> Red
+            </label>
+            <label>
+                <input type="checkbox" name="colorscheme" value="blue"> Blue
+            </label>
+            <label>
+                <input type="checkbox" name="colorscheme" value="green"> Green
+            </label>
+            <label>
+                <input type="checkbox" name="colorscheme" value="yellow"> Yellow
+            </label>
+            <label>
+                <input type="checkbox" name="colorscheme" value="purple"> Purple
+            </label>
+            <label>
+                <input type="checkbox" name="colorscheme" value="orange"> Orange
+            </label>
+            <label>
+                <input type="checkbox" name="colorscheme" value="black"> Black
+            </label>
+            <label>
+                <input type="checkbox" name="colorscheme" value="white"> White
+            </label>
+            <label>
+                <input type="checkbox" name="colorscheme" value="other"> Other (Please specify)
+            </label>
+        </div>
+        <div class="question">
+            <p style="color: white; font-weight: bold;">4. What type of website or app do you need?</p>
+            <label>
+                <input type="radio" name="type" value="informational"> Informational
+            </label>
+            <label>
+                <input type="radio" name="type" value="interactive"> Interactive
+            </label>
+            <label>
+                <input type="radio" name="type" value="ecommerce"> E-commerce
+            </label>
+            <label>
+                <input type="radio" name="type" value="socialnetworking"> Social networking
+            </label>
+            <label>
+                <input type="radio" name="type" value="other"> Other
+            </label>
+        </div>
+        <div class="question">
+            <p style="color: white; font-weight: bold;">5. How many pages or sections do you anticipate for your website or app?</p>
+            <label>
+                <input type="radio" name="pages" value="1-5"> 1-5
+            </label>
+            <label>
+                <input type="radio" name="pages" value="6-10"> 6-10
+            </label>
+            <label>
+                <input type="radio" name="pages" value="16-20"> 16-20
+            </label>
+            <label>
+                <input type="radio" name="pages" value="morethan20"> More than 20
+            </label>
+        </div>
+        <div class="question">
+            <p style="color: white; font-weight: bold;">6. Do you have any specific features or functionalities in mind?</p>
+            <textarea name="features" rows="4" cols="50" placeholder="Enter your specific features or functionalities here"></textarea>
+        </div>
+        <div class="question">
+            <p style="color: white; font-weight: bold;">7. Do you have any specific examples or references for the design style?</p>
+            <textarea name="designstyle" rows="4" cols="50" placeholder="Enter your examples or references here"></textarea>
+        </div>
+        <div class="question">
+            <p style="color: white; font-weight: bold;">8. Do you have any specific content or text that needs to be included?</p>
+            <textarea name="content" rows="4" cols="50" placeholder="Enter your specific content or text here"></textarea>
+        </div>
+        <div class="question">
+            <p style="color: white; font-weight: bold;">9. What is your estimated budget for the project?</p>
+            <label>
+                <input type="radio" name="budget" value="lessthan1000"> Less than $1000
+            </label>
+            <label>
+                <input type="radio" name="budget" value="1000-5000"> $1000 - $5000
+            </label>
+            <label>
+                <input type="radio" name="budget" value="5000-10000"> $5000 - $10,000
+            </label>
+            <label>
+                <input type="radio" name="budget" value="morethan10000"> More than $10,000
+            </label>
+        </div>
+        <div class="question">
+            <p style="color: white; font-weight: bold;">10. What is your preferred timeline for the completion of the project?</p>
+            <label>
+                <input type="radio" name="timeline" value="urgent"> Urgent (within a month)
+            </label>
+            <label>
+                <input type="radio" name="timeline" value="1-3months"> 1-3 months
+            </label>
+            <label>
+                <input type="radio" name="timeline" value="3-6months"> 3-6 months
+            </label>
+            <label>
+                <input type="radio" name="timeline" value="6-12months"> 6-12 months
+            </label>
+            <label>
+                <input type="radio" name="timeline" value="flexible"> Flexible
+            </label>
+        </div>
+        <div class="progress-container">
+            <div class="progress">
+                <div class="progress-bar" style="width: 0;"></div>
+            </div>
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+    <script src="script.js"></script>
+</body>
+</html>
